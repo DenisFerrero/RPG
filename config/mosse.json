@@ -1,0 +1,19 @@
+{
+    "MosseJSON": [{
+        "valMax": 100,
+        "valMin": 10,
+        "pSuccess": 40,
+        "manaCost": 50,
+        "sound": "new/path/for/sound",
+        "img": "new/path/for/img",
+        "type": true
+    }, {
+        "valMax": 100,
+        "valMin": 10,
+        "pSuccess": 40,
+        "manaCost": 50,
+        "sound": "new/path/for/sound",
+        "img": "new/path/for/img",
+        "type": true
+    }]
+}

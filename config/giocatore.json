@@ -1,0 +1,12 @@
+{
+    "GiocatoriJSON": [{
+        "vitaMax": 100,
+        "life": 100,
+        "mana": 100,
+        "manaMax": 100,
+        "nome": "Mario",
+        "img": "new/path/for/image"
+    }, {
+
+    }]
+}

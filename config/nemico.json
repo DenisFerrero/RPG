@@ -1,0 +1,11 @@
+{
+    "NemiciJSON": [{
+        "life": 100,
+        "mana": 100,
+        "manaMax": 100,
+        "nome": "i 50 esercizi dell'Abbate",
+        "img": "new/path/for/image"
+    }, {
+
+    }]
+}
