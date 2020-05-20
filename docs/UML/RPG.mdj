@@ -242,6 +242,23 @@
 										},
 										{
 											"_type": "UMLOperationView",
+											"_id": "AAAAAAFyMkK7LsIiYA8=",
+											"_parent": {
+												"$ref": "AAAAAAFyK803d1h03XM="
+											},
+											"model": {
+												"$ref": "AAAAAAFyMkK608IfPC4="
+											},
+											"font": "Arial;13;0",
+											"left": 285,
+											"top": 360,
+											"width": 303.83056640625,
+											"height": 13,
+											"text": "~Personaggio(readedIndex: int): void",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
 											"_id": "AAAAAAFyK9Lo1ljcAtw=",
 											"_parent": {
 												"$ref": "AAAAAAFyK803d1h03XM="
@@ -251,7 +268,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 285,
-											"top": 360,
+											"top": 375,
 											"width": 303.83056640625,
 											"height": 13,
 											"text": "+getLife(): int",
@@ -268,7 +285,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 285,
-											"top": 375,
+											"top": 390,
 											"width": 303.83056640625,
 											"height": 13,
 											"text": "+setLife(newLife: int): void",
@@ -285,7 +302,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 285,
-											"top": 390,
+											"top": 405,
 											"width": 303.83056640625,
 											"height": 13,
 											"text": "+getMana(): int",
@@ -302,7 +319,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 285,
-											"top": 405,
+											"top": 420,
 											"width": 303.83056640625,
 											"height": 13,
 											"text": "+setMana(newMana: int): void",
@@ -313,7 +330,7 @@
 									"left": 280,
 									"top": 340,
 									"width": 313.83056640625,
-									"height": 83
+									"height": 98
 								},
 								{
 									"_type": "UMLReceptionCompartmentView",
@@ -2586,8 +2603,8 @@
 							"left": 952,
 							"top": 128,
 							"width": 472,
-							"height": 433,
-							"text": "Personaggio (interfaccia) :\n - life : quantitativo di vita di un personaggio\n -  mana : mana disponbiledi un personaggio\n - maxMana :  mana massimo che può ottenere un personaggio\n - nome : nome del personaggio da visualizzare a video\n - attacks : attacchi disponibili del personaggio\n - img : path dell'immagine del personaggio\n\nGiocatore (derivata da personaggio) :\n - lifeMax : vita massima ottenibile da un personaggio\n - evil : nemico su cui arriaveranno i danni durante un attacco\n - attack : metodo di calcolo dell'attaccato della mossa selezionata con index\n\nNemico (derivata da personaggio) : \n - gamers : i giocatori che subiranno i danni durante i round\n -  attack : metodo di randomizzazione dell'attacco e del bersaglio e successivamente calcolo dei danni\n\nMossa : \n - valMax : valore massimo che la mossa può infliggere\n - valMin : valore minimo che la mossa può infliggere\n - pSuccesso : valore minimo sopra il quale il danno generato potrà andare a buon fine\n - manaCost : costo in mana dell'uso della mossa\n - img : path della gif della mossa\n - sound : path del suono della mossa\n - type : tipo di mossa, danno o ripristino\n - area : tipo di danno che può fare, ad area quindi colpire tutti i personaggi o solo uno singolo\n - dmg : calcolo del danno che può infliggere la mossa\n - precision : calcolo precisione (pSuccess)"
+							"height": 458,
+							"text": "Personaggio (interfaccia) :\n - life : quantitativo di vita di un personaggio\n -  mana : mana disponbiledi un personaggio\n - maxMana :  mana massimo che può ottenere un personaggio\n - nome : nome del personaggio da visualizzare a video\n - attacks : attacchi disponibili del personaggio\n - img : path dell'immagine del personaggio\n - readedIndex : indice per la lettura del personaggio dal file di configurazione json\n\nGiocatore (derivata da personaggio) :\n - lifeMax : vita massima ottenibile da un personaggio\n - evil : nemico su cui arriaveranno i danni durante un attacco\n - attack : metodo di calcolo dell'attaccato della mossa selezionata con index\n\nNemico (derivata da personaggio) : \n - gamers : i giocatori che subiranno i danni durante i round\n -  attack : metodo di randomizzazione dell'attacco e del bersaglio e successivamente calcolo dei danni\n\nMossa : \n - valMax : valore massimo che la mossa può infliggere\n - valMin : valore minimo che la mossa può infliggere\n - pSuccesso : valore minimo sopra il quale il danno generato potrà andare a buon fine\n - manaCost : costo in mana dell'uso della mossa\n - img : path della gif della mossa\n - sound : path del suono della mossa\n - type : tipo di mossa, danno o ripristino\n - area : tipo di danno che può fare, ad area quindi colpire tutti i personaggi o solo uno singolo\n - dmg : calcolo del danno che può infliggere la mossa\n - precision : calcolo precisione (pSuccess)"
 						}
 					]
 				},
@@ -2763,6 +2780,35 @@
 									"_id": "AAAAAAFyK9Naa1jjH0Y=",
 									"_parent": {
 										"$ref": "AAAAAAFyK9Iw8FjLpNA="
+									},
+									"type": "void",
+									"direction": "return"
+								}
+							]
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "AAAAAAFyMkK608IfPC4=",
+							"_parent": {
+								"$ref": "AAAAAAFyK803BlhrGPY="
+							},
+							"name": "Personaggio",
+							"visibility": "package",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAFyMkLJj8JTMpk=",
+									"_parent": {
+										"$ref": "AAAAAAFyMkK608IfPC4="
+									},
+									"name": "readedIndex",
+									"type": "int"
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAFyMkLJkcJUFnE=",
+									"_parent": {
+										"$ref": "AAAAAAFyMkK608IfPC4="
 									},
 									"type": "void",
 									"direction": "return"

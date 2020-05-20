@@ -6,3 +6,4 @@
   - [W3School](https://www.w3schools.com/js/js_classes.asp)
   - [Moz://a](https://developer.mozilla.org/it/docs/Web/JavaScript/Reference/Classes)
 - [StarUML registration (only linux)](https://gist.github.com/trandaison/40b1d83618ae8e3d2da59df8c395093a)
+- [JSON](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON)
