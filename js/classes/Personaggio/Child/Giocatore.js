@@ -3,9 +3,7 @@ class Giocatore extends Personaggio {
     evil;
 
     constructor(life, name, img, vitaMax, evil) {
-        this.life = life;
-        this.name = name;
-        this.img = img;
+        super(life, name, img, mana, manaMax); //Lo fai con la super fai prima
         this.vitaMax = vitaMax;
         this.evil = evil;
     }
