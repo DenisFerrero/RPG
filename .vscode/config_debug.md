@@ -3,4 +3,4 @@
 - [**Firefox**](https://marketplace.visualstudio.com/items?itemName=firefox-devtools.vscode-firefox-debug)
 
 Il file launch.json è stato configurato per poter lanciare il progetto e poter eseguire il debug della pagina direttamente da VS Code piuttosto che dal Browser scelto.
-Per poter far questo scaricare la rispettiva estensione cercare il proprio browser nella lista delle estensioni e confiogurarli con cliccando sul link sopra indicato nella lista
+Per poter far questo scaricare la rispettiva estensione cercare il proprio browser nella lista delle estensioni e configurarli cliccando sul link sopra indicato nella lista
