@@ -11,6 +11,7 @@ class Mossa {
     sound;
     type;
     idMex;
+    description;
 
     constructor(valMax, valMin, pSuccess, manaCost, img, sound, type, idMex) {
         this.valMax = valMax;
