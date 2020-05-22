@@ -37,6 +37,9 @@ class Mossa {
         this.idMex = idMex;
     }
 
+    let jsonstr = JSON.stringify(Mossa);
+    console.log(typeof Mossa, Mossa)
+
     dmg() {
 
 
