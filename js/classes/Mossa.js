@@ -11,8 +11,9 @@ class Mossa {
     sound;
     type;
     idMex;
+    description;
 
-    constructor(valMax, valMin, pSuccess, manaCost, img, sound, type, idMex) {
+    constructor(valMax, valMin, pSuccess, manaCost, img, sound, type, idMex, description) {
         this.valMax = valMax;
         this.valMin = valMin;
         this.pSuccess = pSuccess;
@@ -21,6 +22,7 @@ class Mossa {
         this.sound = sound;
         this.type = type;
         this.idMex = idMex;
+        this.description = description;
     }
 
     constructor(readedIndex, idMex) {
