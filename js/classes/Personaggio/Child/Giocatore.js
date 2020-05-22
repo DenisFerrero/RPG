@@ -11,4 +11,7 @@ class Giocatore extends Personaggio {
     attacks(index) {
         // TODO
     }
+    checkWin() {
+        // TODO
+    }
 }

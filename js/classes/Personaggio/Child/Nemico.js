@@ -11,4 +11,7 @@ class Nemico extends Personaggio {
     attacks() {
         // TODO
     }
+    checkWin() {
+        // TODO
+    }
 }
