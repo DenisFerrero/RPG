@@ -11,7 +11,7 @@
             "mana": 90,
             "manaMax": 90,
             "nome": "Fantosauro",
-            "img": "media/image/evil/Fantosauro.gif"
+            "img": "media/image/evil/Fantosauro.png"
         },
 
         {
@@ -19,14 +19,14 @@
             "mana": 180,
             "manaMax": 180,
             "nome": "Candela-bruh",
-            "img": "media/image/evil/Candela-bruh.gif"
+            "img": "media/image/evil/Candela-bruh.png"
         },
         {
             "life": 90,
             "mana": 95,
             "manaMax": 95,
             "nome": "Funghetto",
-            "img": "media/image/evil/Funghetto.gif"
+            "img": "media/image/evil/Funghetto.png"
         }
 
 
