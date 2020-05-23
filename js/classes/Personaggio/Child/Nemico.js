@@ -12,6 +12,10 @@ class Nemico extends Personaggio {
         // TODO
     }
     checkWin() {
-        // TODO
+        var ret = true;
+        this.gamers.forEach(gam => {
+            ret = ret && gam.life == 0;
+        });
+        return ret;
     }
 }

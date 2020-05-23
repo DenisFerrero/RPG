@@ -12,6 +12,6 @@ class Giocatore extends Personaggio {
         // TODO
     }
     checkWin() {
-        // TODO
+        return evil.life == 0;
     }
 }
