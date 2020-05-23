@@ -7,6 +7,15 @@ class Giocatore extends Personaggio {
         this.vitaMax = vitaMax;
         this.evil = evil;
     }
+    constructor(readedIndex) {
+        var newGiocatore = JSON.parse(GiocatoriJSON)[readedIndex];
+        this.vitaMax = newGiocatore.vitaMax;
+        this.life = newGiocatore.life;
+        this.mana = newGiocatore.mana;
+        this.manaMax = newGiocatore.manaMax;
+        this.name = newGiocatore.name;
+        this.img = newGiocatore.img;
+    }
 
     attacks(index) {
         // TODO

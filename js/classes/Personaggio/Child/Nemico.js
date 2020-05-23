@@ -7,6 +7,15 @@ class Nemico extends Personaggio {
         this.img = img;
         this.gamers = gamers;
     }
+    constructor(readedIndex, gamers) {
+        var newNemico = JSON.parse(NemiciJSON)[readedIndex];
+        this.life = newNemico.life;
+        this.mana = newNemico.mana;
+        this.manaMax = newNemico.manaMax;
+        this.name = newNemico.nome;
+        this.img = newNemico.img;
+        this.gamers = gamers;
+    }
 
     attacks() {
         // TODO
