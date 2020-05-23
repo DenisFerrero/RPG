@@ -18,6 +18,7 @@ class Giocatore extends Personaggio {
     }
 
     attacks(index) {
+        var attack = new Mossa(index);
         // TODO
     }
     checkWin() {
