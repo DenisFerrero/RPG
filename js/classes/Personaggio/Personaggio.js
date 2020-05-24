@@ -5,12 +5,12 @@ class Personaggio {
     nome;
     img;
 
-    constructor(life, name, img) {
+    constructor(life, name, img, mana, manaMax) {
         this.life = life;
         this.name = name;
         this.img = img;
-        this.mana = 0; // TODO: set value
-        this.manaMax = 0; // TODO: set value
+        this.mana = mana;
+        this.manaMax = manaMax;
     }
 
     isAlive() {
