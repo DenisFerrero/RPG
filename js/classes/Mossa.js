@@ -36,7 +36,7 @@ class Mossa {
         this.idMex = idMex;
     }
 
-    dmg() {
+    dmg(nomeBersaglio) {
         //Generazione del danno, il danno varia tra valore max e min
         let damage = Math.floor(Math.random() * (this.valMax - this.valMin + 1) + this.valMin);
         var txt = document.getElementById(this.idMex);
@@ -45,10 +45,10 @@ class Mossa {
             txt.innerHTML = "Viene usata " + this.name;
             if (this.type) {
                 //Si scrive che il si fa certo tot di danno
-                txt.innerHTML += " contro il nemico che subisce " + damage + " danni!";
+                txt.innerHTML += " contro " + nomeBersaglio + " che subisce " + damage + " danni!";
             } else {
                 //Si scrive che si cura di un tot
-                txt.innerHTML += " per curarsi di " + damage;
+                txt.innerHTML += "su di " + nomeBersaglio + " per curarsi di " + damage;
             }
             //Si riproduce l'audio del danno
             let audio = new Audio(this.sound);

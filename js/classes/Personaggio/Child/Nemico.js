@@ -28,7 +28,13 @@ class Nemico extends Personaggio {
     }
 
     attacks() {
-        // TODO
+        let indexPlayer = Math.floor(Math.random() * 4);
+        let indexMossa = Math.floor(Math.random() * 4);
+        this.gamers[indexPlayer].life -= this.mosse[indexMossa].dmg(this.gamers[indexPlayer].name);
+        if (this.checkWin()) {
+            //Dopo un secondo carica la pagina di sconfitta
+            setTimeout(() => { window.location.href = './end_page/lose.html' }, 1000);
+        }
     }
     checkWin() {
         var ret = true;
