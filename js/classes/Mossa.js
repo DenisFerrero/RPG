@@ -34,6 +34,7 @@ class Mossa {
         this.img = newMossa.img;
         this.type = newMossa.type;
         this.idMex = idMex;
+        this.description = newMossa.description;
     }
 
     dmg() {
