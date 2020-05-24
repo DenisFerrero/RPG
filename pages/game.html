@@ -17,10 +17,23 @@
 
     <link href="../css/index.css" rel="stylesheet" type="text/css">
     <!-- End DON'T TOUCH THAT INCLUDE OR YOU'LL DIE -->
+    <script>
+        $(document).ready(() => {
+            //Cambio del volume dell'audio in modo che venga un po' più basso
+            changeBGSoundVolume(0.4);
+        })
 
+        function changeBGSoundVolume(x) {
+            let audio = document.getElementById("bg-sound");
+            audio.volume = x;
+        }
+    </script>
 </head>
 
 <body>
+    <audio id="bg-sound" autoplay loop>
+        <source src="../media/sound/PagesSound/Game.mp3">
+    </audio>
     <div class="container mt-5">
         <div class="container border rounded p-3 col-12 row">
             <div class="progress col-12">
