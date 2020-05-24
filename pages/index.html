@@ -17,10 +17,30 @@
 
     <!-- End DON'T TOUCH THAT INCLUDE OR YOU'LL DIE -->
 
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+    </style>
+
 </head>
 
 <body>
-
+    <div class="container h-100 d-flex align-items-center">
+        <!-- Audio automatico e in loop -->
+        <audio loop autoplay>
+            <source src="../media/sound/PagesSound/Menu.mp3">
+        </audio>
+        <!-- Visualizzazione del testo -->
+        <div class="text-center col-12 row">
+            <span class="display-1 col-12">RPG</span>
+            <!-- Link alla pagina per iniziare il gioco -->
+            <span class="col-12">
+                <a href="./game.html" class="btn btn-success btn-lg">Inizia a giocare</a>
+            </span>
+        </div>
+    </div>
 </body>
 
 </html>
