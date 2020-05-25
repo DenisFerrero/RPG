@@ -3,14 +3,16 @@ class Giocatore extends Personaggio {
     evil;
     mosse = [];
 
-    constructor(life, name, img, vitaMax, evil) {
+    //DUPLICATI DEI COSTRUTTORI NON ACCETTATI
+    /*constructor(life, name, img, vitaMax, evil) {
         super(life, name, img, mana, manaMax); //Lo fai con la super fai prima
         this.vitaMax = vitaMax;
         this.evil = evil;
-    }
+    }*/
+
     constructor(readedIndex, evil, idMex) {
         //Lettura dei dati del personaggio dal file JSON
-        var newGiocatore = JSON.parse(GiocatoriJSON)[readedIndex];
+        var newGiocatore = GiocatoriJSON[readedIndex];
         this.vitaMax = newGiocatore.vitaMax;
         this.life = newGiocatore.life;
         this.mana = newGiocatore.mana;

@@ -11,7 +11,8 @@ class Mossa {
     idMex;
     description;
 
-    constructor(name, valMax, valMin, pSuccess, manaCost, img, sound, type, idMex, description) {
+    //DUPLICATI DEI COSTRUTTORI NON ACCETTATI
+    /*constructor(name, valMax, valMin, pSuccess, manaCost, img, sound, type, idMex, description) {
         this.valMax = valMax;
         this.valMin = valMin;
         this.pSuccess = pSuccess;
@@ -21,10 +22,10 @@ class Mossa {
         this.type = type; //TRUE = danno
         this.idMex = idMex;
         this.description = description;
-    }
+    }*/
 
     constructor(readedIndex, idMex) {
-        var newMossa = JSON.parse(MosseJSON)[readedIndex];
+        var newMossa = MosseJSON[readedIndex];
         this.name = newMossa.name;
         this.valMax = newMossa.valMax;
         this.valMin = newMossa.valMin;

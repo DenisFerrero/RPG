@@ -2,15 +2,18 @@ class Nemico extends Personaggio {
     gamers;
     mosse = [];
 
-    constructor(life, name, img, gamers) {
+    //DUPLICATI DEI COSTRUTTORI NON ACCETTATI
+    /*constructor(life, name, img, gamers) {
         this.life = life;
         this.name = name;
         this.img = img;
         this.gamers = gamers;
-    }
+    }*/
+
     constructor(readedIndex, gamers, idMex) {
-        var newNemico = JSON.parse(NemiciJSON)[readedIndex];
+        var newNemico = NemiciJSON[readedIndex];
         this.life = newNemico.life;
+        this.vitaMax = newNemico.life;
         this.mana = newNemico.mana;
         this.manaMax = newNemico.manaMax;
         this.name = newNemico.nome;
