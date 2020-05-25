@@ -11,13 +11,14 @@ class Nemico extends Personaggio {
     }*/
 
     constructor(readedIndex, gamers, idMex) {
+        super();
         var newNemico = NemiciJSON[readedIndex];
         this.life = newNemico.life;
-        this.vitaMax = newNemico.life;
         this.mana = newNemico.mana;
         this.manaMax = newNemico.manaMax;
         this.name = newNemico.nome;
         this.img = newNemico.img;
+        this.vitaMax = newNemico.life;
         this.gamers = gamers;
         this.mosse.push(new Mossa(0, idMex));
         this.mosse.push(new Mossa(readedIndex + 6, idMex));
@@ -28,6 +29,7 @@ class Nemico extends Personaggio {
             index = Math.floor(Math.random() * 4 + 6);
         }
         this.mosse.push(new Mossa(index, idMex));
+        console.log(this.mosse);
     }
 
     attacks() {

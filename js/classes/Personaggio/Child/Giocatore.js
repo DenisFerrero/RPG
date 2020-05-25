@@ -11,13 +11,14 @@ class Giocatore extends Personaggio {
     }*/
 
     constructor(readedIndex, evil, idMex) {
+        super();
         //Lettura dei dati del personaggio dal file JSON
         var newGiocatore = GiocatoriJSON[readedIndex];
         this.vitaMax = newGiocatore.vitaMax;
         this.life = newGiocatore.life;
         this.mana = newGiocatore.mana;
         this.manaMax = newGiocatore.manaMax;
-        this.name = newGiocatore.name;
+        this.name = newGiocatore.nome;
         this.img = newGiocatore.img;
         //Inserimento del nemico e delle mosse
         this.evil = evil;

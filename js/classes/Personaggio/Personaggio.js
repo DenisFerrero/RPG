@@ -2,7 +2,7 @@ class Personaggio {
     life;
     mana;
     manaMax;
-    nome;
+    name;
     img;
 
     constructor(life, name, img, mana, manaMax) {
