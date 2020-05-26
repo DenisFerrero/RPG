@@ -29,7 +29,6 @@ class Nemico extends Personaggio {
             index = Math.floor(Math.random() * 4 + 6);
         }
         this.mosse.push(new Mossa(index, idMex));
-        console.log(this.mosse);
     }
 
     attacks() {

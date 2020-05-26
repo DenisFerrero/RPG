@@ -52,7 +52,7 @@ class Mossa {
                 return -1;
             } else {
                 attaccante.mana -= this.manaCost;
-                txt.innerHTML = attaccante.nome + " usa " + this.name;
+                txt.innerHTML = attaccante.name + " usa " + this.name;
                 if (this.type) {
                     //Si scrive che il si fa certo tot di danno
                     txt.innerHTML += " contro " + nomeBersaglio + " che subisce " + damage + " danni!";

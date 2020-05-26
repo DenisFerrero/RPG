@@ -39,6 +39,6 @@ class Giocatore extends Personaggio {
         }
     }
     checkWin() {
-        return evil.life == 0;
+        return this.evil.life == 0;
     }
 }
