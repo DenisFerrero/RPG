@@ -21,7 +21,7 @@ function gameScript() {
     self.game = self.initAll();
 
     self.proportionalWidth = function(val, tot) {
-        return ((val * 100) / tot);
+        return Math.floor(((val * 100) / tot));
     }
 
     self.updateGUI = function() {
@@ -29,27 +29,29 @@ function gameScript() {
         document.getElementById('boss_name').innerHTML = self.game.evil.name;
         document.getElementById('boss_image').src = self.game.evil.img;
         document.getElementById('boss_life_txt').innerHTML = self.game.evil.life;
-        document.getElementById('boss_life').style.width = self.proportionalWidth(self.game.evil.life, self.game.evil.vitaMax) + '%';
+        document.getElementById('boss_life').setAttribute('style', 'width:' + self.proportionalWidth(self.game.evil.life, self.game.evil.vitaMax) + '%');
 
         for (let i = 0; i < 4; i++) {
             idPlayer = 'p' + (i + 1);
             document.getElementById(idPlayer + '_name').innerHTML = self.game.gamers[i].name;
             document.getElementById(idPlayer + '_life_txt').innerHTML = self.game.gamers[i].life;
             document.getElementById(idPlayer + '_mana_txt').innerHTML = self.game.gamers[i].mana;
-            document.getElementById(idPlayer + '_life').style.width = self.proportionalWidth(self.game.gamers[i].life, self.game.gamers[i].vitaMax);
-            document.getElementById(idPlayer + '_mana').style.width = self.proportionalWidth(self.game.gamers[i].mana, self.game.gamers[i].manaMax);
+            document.getElementById(idPlayer + '_life').setAttribute('style', 'width:' + self.proportionalWidth(self.game.gamers[i].life, self.game.gamers[i].vitaMax) + '%');
+            document.getElementById(idPlayer + '_mana').setAttribute('style', 'width:' + self.proportionalWidth(self.game.gamers[i].mana, self.game.gamers[i].manaMax) + '%');
         }
     }
 
     self.selectedPlayer = function(index) {
-        var mosse = document.getElementById("mosse");
-        self.currentPlayer = index;
-        mosse.selectedIndex = 0;
-        document.getElementById("mossaDescription").innerHTML = "Descrizione mossa";
+        if (self.game.gamers[index].life > 0) {
+            var mosse = document.getElementById("mosse");
+            self.currentPlayer = index;
+            mosse.selectedIndex = 0;
+            document.getElementById("mossaDescription").innerHTML = "Descrizione mossa";
 
-        mosse.options.item(1).text = new Mossa(0, null).name;
-        mosse.options.item(2).text = new Mossa(1, null).name;
-        mosse.options.item(3).text = new Mossa((index + 2), null).name;
+            mosse.options.item(1).text = new Mossa(0, null).name;
+            mosse.options.item(2).text = new Mossa(1, null).name;
+            mosse.options.item(3).text = new Mossa((index + 2), null).name;
+        }
     }
 
     self.selectedAction = function() {

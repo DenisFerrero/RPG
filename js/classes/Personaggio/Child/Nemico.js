@@ -40,13 +40,13 @@ class Nemico extends Personaggio {
         }
         if (this.checkWin()) {
             //Dopo un secondo carica la pagina di sconfitta
-            setTimeout(() => { window.location.href = './end_page/lose.html' }, 1000);
+            setTimeout(() => { window.location.href = "./end_page/lose.html" }, 1000)
         }
     }
     checkWin() {
         var ret = true;
         this.gamers.forEach(gam => {
-            ret = ret && gam.life == 0;
+            ret = ret && gam.life < 0;
         });
         return ret;
     }

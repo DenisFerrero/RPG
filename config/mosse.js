@@ -39,16 +39,6 @@ var MosseJSON = [{
     "type": true,
     "description": "Don't forget him.<br>Danno: 15-40 HP<br>Costo: 20 MP"
 }, {
-    "name": "Urlo disumano",
-    "valMax": 100,
-    "valMin": 20,
-    "pSuccess": 40,
-    "manaCost": 35,
-    "sound": "../media/sound/SkillSound/No.mp3",
-    "img": "new/path/for/img",
-    "type": true,
-    "description": "Un grido potentissimo.<br>Danno: 40-100 HP<br>Costo: 35 MP"
-}, {
     "name": "Rage of Kaisar",
     "valMax": 40,
     "valMin": 10,
@@ -58,6 +48,16 @@ var MosseJSON = [{
     "img": "new/path/for/img",
     "type": true,
     "description": "Favaroo!<br>Danno: 15-40 HP<br>Costo: 20 MP"
+}, {
+    "name": "Urlo disumano",
+    "valMax": 100,
+    "valMin": 20,
+    "pSuccess": 40,
+    "manaCost": 35,
+    "sound": "../media/sound/SkillSound/No.mp3",
+    "img": "new/path/for/img",
+    "type": true,
+    "description": "Un grido potentissimo.<br>Danno: 40-100 HP<br>Costo: 35 MP"
 }, {
     "name": "Pingas",
     "valMax": 35,
@@ -72,7 +72,7 @@ var MosseJSON = [{
     "name": "Fai roar",
     "valMax": 100,
     "valMin": 20,
-    "pSuccess": 75,
+    "pSuccess": 40,
     "manaCost": 50,
     "sound": "../media/sound/SkillSound/Roar.mp3",
     "img": "new/path/for/img",

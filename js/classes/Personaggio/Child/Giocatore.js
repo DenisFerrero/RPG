@@ -34,14 +34,13 @@ class Giocatore extends Personaggio {
                 this.evil.life -= dmg;
             }
             if (this.checkWin()) {
-                //Dopo un secondo carica la pagina di vittoria
-                setTimeout(() => { window.location.href = './end_page/win.html' }, 1000);
+                window.location.href = "./end_page/win.html"
             }
         } else {
             this.life += this.mosse[index].dmg(this, null);
         }
     }
     checkWin() {
-        return this.evil.life == 0;
+        return this.evil.life < 0;
     }
 }
