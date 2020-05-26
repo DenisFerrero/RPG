@@ -29,13 +29,13 @@ class Giocatore extends Personaggio {
 
     attacks(index) {
         if (this.mosse[index].type) {
-            this.evil.life -= this.mosse[index].dmg(this.evil.name);
+            this.evil.life -= this.mosse[index].dmg(this, this.evil.name);
             if (this.checkWin()) {
                 //Dopo un secondo carica la pagina di vittoria
                 setTimeout(() => { window.location.href = './end_page/win.html' }, 1000);
             }
         } else {
-            this.life += this.mosse[index].dmg(this.name);
+            this.life += this.mosse[index].dmg(this, null);
         }
     }
     checkWin() {
