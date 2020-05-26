@@ -33,6 +33,14 @@ function updateGUI(game) {
 
 }
 
+function selectedPlayer(index) {
+    var mosse = document.getElementById("mosse");
+
+    mosse.options.item(1).text = new Mossa(0, null).name;
+    mosse.options.item(2).text = new Mossa(1, null).name;
+    mosse.options.item(3).text = new Mossa((index + 2), null).name;
+}
+
 function proportionalWidth(val, tot) {
     return ((val * 100) / tot);
 }
