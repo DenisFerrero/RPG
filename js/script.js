@@ -1,11 +1,10 @@
 function initAll() {
 
-    var turns = 0;
-    var console = document.getElementById("gameConsole").innerHTML;
     var game = {};
 
     game['evil'] = new Nemico(Math.floor(Math.random() * 4), null, 'gameConsole');
-
+    game['turns'] = 0;
+    game['console'] = document.getElementById("gameConsole").innerHTML;
     game['gamers'] = [];
     for (let i = 0; i < 4; i++) {
         game.gamers.push(new Giocatore(i, game.evil, 'gameConsole'));
@@ -74,8 +73,8 @@ function selectedAction() {
     }
 }
 
-function attack() {
-    if (turns < 2) {
+function attack(game) {
+    if (game[turns] < 2) {
         game.gamers[currentPlayer].attacks(action);
         turns++;
     } else {
