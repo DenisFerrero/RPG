@@ -29,7 +29,10 @@ class Giocatore extends Personaggio {
 
     attacks(index) {
         if (this.mosse[index].type) {
-            this.evil.life -= this.mosse[index].dmg(this, this.evil.name);
+            var dmg = this.mosse[index].dmg(this, this.evil.name);
+            if (dmg > 0) {
+                this.evil.life -= dmg;
+            }
             if (this.checkWin()) {
                 //Dopo un secondo carica la pagina di vittoria
                 setTimeout(() => { window.location.href = './end_page/win.html' }, 1000);

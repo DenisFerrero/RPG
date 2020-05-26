@@ -68,8 +68,8 @@ class Mossa {
                     setTimeout(() => {
                         txt.innerHTML = "";
                     }, 500);
-                    return damage;
                 })
+                return damage;
             }
         } else {
             //Se non supera i valori di precisione allora torna semplicemente 0 + mex;
