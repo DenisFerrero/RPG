@@ -30,9 +30,13 @@ function gameScript() {
         document.getElementById('boss_image').src = self.game.evil.img;
         document.getElementById('boss_life_txt').innerHTML = self.game.evil.life;
         document.getElementById('boss_life').setAttribute('style', 'width:' + self.proportionalWidth(self.game.evil.life, self.game.evil.vitaMax) + '%');
+        if ((self.game.evil.mana + 5) > self.game.evil.manaMax) self.game.evil.mana = 100;
+        else self.game.evil.mana += 5;
 
         for (let i = 0; i < 4; i++) {
             idPlayer = 'p' + (i + 1);
+            if ((self.game.gamers[i].mana + 5) > self.game.gamers[i].manaMax) self.game.gamers[i].mana = 100;
+            else self.game.gamers[i].mana += 5;
             document.getElementById(idPlayer + '_name').innerHTML = self.game.gamers[i].name;
             document.getElementById(idPlayer + '_life_txt').innerHTML = self.game.gamers[i].life;
             document.getElementById(idPlayer + '_mana_txt').innerHTML = self.game.gamers[i].mana;
