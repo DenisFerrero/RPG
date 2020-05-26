@@ -1,12 +1,12 @@
 var NemiciJSON = [{
-        "life": 100,
+        "life": 600,
         "mana": 150,
         "manaMax": 150,
         "nome": "Bloody",
         "img": "../media/image/evil/Bloody.gif"
     },
     {
-        "life": 200,
+        "life": 1500,
         "mana": 90,
         "manaMax": 90,
         "nome": "Fantosauro",
@@ -14,14 +14,14 @@ var NemiciJSON = [{
     },
 
     {
-        "life": 90,
+        "life": 550,
         "mana": 180,
         "manaMax": 180,
         "nome": "Candela-bruh",
         "img": "../media/image/evil/Candela-bruh.png"
     },
     {
-        "life": 90,
+        "life": 700,
         "mana": 95,
         "manaMax": 95,
         "nome": "Funghetto",
