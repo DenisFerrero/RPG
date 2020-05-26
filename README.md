@@ -18,3 +18,9 @@ L'utente avrà a disposizione **4 personaggi**, per decidere con quale attaccare
 
 ## Bug
 Le ultime versioni dei browser hanno disattivato di default gli autoplay degli audio e dei video quindi per poter ascoltare anche l'audio di sottofondo durante il combattimento e nella pagina home bisognerà attivare in alto a sinistra, vicino alla *barra di navigazione*, i permessi per l'audio. Dopo questa operazione ricaricare la pagina per rendere effettive le modifiche.
+
+## Credits
+* [@Elom23](https://github.com/Elom23)
+* [@TanjaPrini](https://github.com/TanjaPrini)
+* [@ANDY2099x](https://github.com/ANDY2099x)
+* [@DenisFerrero](https://github.com/DenisFerrero)
