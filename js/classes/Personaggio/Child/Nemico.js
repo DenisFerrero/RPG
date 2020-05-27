@@ -33,13 +33,15 @@ class Nemico extends Personaggio {
 
     attacks() {
         let indexPlayer = Math.floor(Math.random() * 4);
-        while(this.gamers[indexPlayer].life <= 0) {
+        while (this.gamers[indexPlayer].life <= 0) {
             indexPlayer = Math.floor(Math.random() * 4);
         }
         let indexMossa = Math.floor(Math.random() * 3);
         var dmg = this.mosse[indexMossa].dmg(this, this.gamers[indexPlayer].name);
         if (dmg > 0) {
             this.gamers[indexPlayer].life -= dmg;
+            if (this.gamers[indexPlayer].life < 0)
+                this.gamers[indexPlayer].life = 0;
         }
         if (this.checkWin()) {
             //Dopo un secondo carica la pagina di sconfitta
