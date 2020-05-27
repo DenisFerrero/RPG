@@ -38,6 +38,8 @@ class Giocatore extends Personaggio {
             }
         } else {
             this.life += this.mosse[index].dmg(this, null);
+            if (this.life > this.vitaMax)
+                this.life = this.vitaMax;
         }
     }
     checkWin() {
