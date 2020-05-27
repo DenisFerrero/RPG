@@ -58,7 +58,7 @@ class Mossa {
                     txt.innerHTML += " contro " + nomeBersaglio + " che subisce " + damage + " danni!";
                 } else {
                     //Si scrive che si cura di un tot
-                    txt.innerHTML += "su di " + attaccante.nome + " per curarsi di " + damage;
+                    txt.innerHTML += " per curarsi di " + damage;
                 }
                 //Si riproduce l'audio del danno
                 let audio = new Audio(this.sound);
