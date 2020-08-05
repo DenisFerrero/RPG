@@ -81,8 +81,11 @@ class Mossa {
         }
     }
 
+
+
     precision(damage) {
         return damage >= this.pSuccess;
     }
+
 
 }
