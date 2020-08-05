@@ -427,7 +427,7 @@
 											"font": "Arial;13;1",
 											"left": 757,
 											"top": 239,
-											"width": 335.6513671875,
+											"width": 442.5966796875,
 											"height": 13,
 											"text": "Mossa"
 										},
@@ -460,7 +460,7 @@
 									"font": "Arial;13;0",
 									"left": 752,
 									"top": 232,
-									"width": 345.6513671875,
+									"width": 452.5966796875,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAFyK9VHglkMS0c="
@@ -497,7 +497,7 @@
 											"font": "Arial;13;0",
 											"left": 757,
 											"top": 262,
-											"width": 335.6513671875,
+											"width": 442.5966796875,
 											"height": 13,
 											"text": "-valMax: int",
 											"horizontalAlignment": 0
@@ -514,7 +514,7 @@
 											"font": "Arial;13;0",
 											"left": 757,
 											"top": 277,
-											"width": 335.6513671875,
+											"width": 442.5966796875,
 											"height": 13,
 											"text": "-valMin: int",
 											"horizontalAlignment": 0
@@ -531,7 +531,7 @@
 											"font": "Arial;13;0",
 											"left": 757,
 											"top": 292,
-											"width": 335.6513671875,
+											"width": 442.5966796875,
 											"height": 13,
 											"text": "-pSuccess: int",
 											"horizontalAlignment": 0
@@ -548,7 +548,7 @@
 											"font": "Arial;13;0",
 											"left": 757,
 											"top": 307,
-											"width": 335.6513671875,
+											"width": 442.5966796875,
 											"height": 13,
 											"text": "-manaCost: int",
 											"horizontalAlignment": 0
@@ -565,7 +565,7 @@
 											"font": "Arial;13;0",
 											"left": 757,
 											"top": 322,
-											"width": 335.6513671875,
+											"width": 442.5966796875,
 											"height": 13,
 											"text": "-img: int",
 											"horizontalAlignment": 0
@@ -582,7 +582,7 @@
 											"font": "Arial;13;0",
 											"left": 757,
 											"top": 337,
-											"width": 335.6513671875,
+											"width": 442.5966796875,
 											"height": 13,
 											"text": "-sound: string",
 											"horizontalAlignment": 0
@@ -599,7 +599,7 @@
 											"font": "Arial;13;0",
 											"left": 757,
 											"top": 352,
-											"width": 335.6513671875,
+											"width": 442.5966796875,
 											"height": 13,
 											"text": "+type: bool",
 											"horizontalAlignment": 0
@@ -652,7 +652,7 @@
 											"font": "Arial;13;0",
 											"left": 757,
 											"top": 367,
-											"width": 335.6513671875,
+											"width": 442.5966796875,
 											"height": 13,
 											"text": "-idMex: string",
 											"horizontalAlignment": 0
@@ -661,7 +661,7 @@
 									"font": "Arial;13;0",
 									"left": 752,
 									"top": 257,
-									"width": 345.6513671875,
+									"width": 452.5966796875,
 									"height": 128
 								},
 								{
@@ -686,9 +686,9 @@
 											"font": "Arial;13;0",
 											"left": 757,
 											"top": 390,
-											"width": 335.6513671875,
+											"width": 442.5966796875,
 											"height": 13,
-											"text": "+dmg(attaccante: Personaggio, nomeBersaglio: string): int",
+											"text": "+dmg(attaccante: Personaggio, nomeBersaglio: string, callback: function): int",
 											"horizontalAlignment": 0
 										},
 										{
@@ -703,7 +703,7 @@
 											"font": "Arial;13;0",
 											"left": 757,
 											"top": 405,
-											"width": 335.6513671875,
+											"width": 442.5966796875,
 											"height": 13,
 											"text": "-precision(): bool",
 											"horizontalAlignment": 0
@@ -720,7 +720,7 @@
 											"font": "Arial;13;0",
 											"left": 757,
 											"top": 420,
-											"width": 335.6513671875,
+											"width": 442.5966796875,
 											"height": 13,
 											"text": "+Mossa(readedIndex: string, idMex: string): void",
 											"horizontalAlignment": 0
@@ -729,7 +729,7 @@
 									"font": "Arial;13;0",
 									"left": 752,
 									"top": 385,
-									"width": 345.6513671875,
+									"width": 452.5966796875,
 									"height": 53
 								},
 								{
@@ -767,7 +767,7 @@
 							"containerChangeable": true,
 							"left": 752,
 							"top": 232,
-							"width": 345.6513671875,
+							"width": 452.5966796875,
 							"height": 236,
 							"nameCompartment": {
 								"$ref": "AAAAAAFyK9VHgVkLm10="
@@ -1461,7 +1461,7 @@
 											"top": 652,
 											"width": 438.1787109375,
 											"height": 13,
-											"text": "+attacks(index: int): void",
+											"text": "+attacks(index: int, callback: function): void",
 											"horizontalAlignment": 0
 										},
 										{
@@ -2646,8 +2646,8 @@
 								"$ref": "AAAAAAFF+qBtyKM79qY="
 							},
 							"font": "Arial;13;0",
-							"left": 1136,
-							"top": 120,
+							"left": 1248,
+							"top": 96,
 							"width": 472,
 							"height": 486,
 							"text": "Personaggio (interfaccia) :\n - life : quantitativo di vita di un personaggio\n -  mana : mana disponbile di un personaggio\n - maxMana :  mana massimo che può ottenere un personaggio\n - nome : nome del personaggio da visualizzare a video\n - attacks : attacchi disponibili del personaggio\n - img : path dell'immagine del personaggio\n - readedIndex : indice per la lettura del personaggio dal file di configurazione json\n\nGiocatore (derivata da personaggio) :\n - lifeMax : vita massima ottenibile da un personaggio\n - evil : nemico su cui arriaveranno i danni durante un attacco\n - attacks: metodo di calcolo dell'attaccato della mossa selezionata con index\n- checkWin: controlla se hai vinto\nNemico (derivata da personaggio) : \n - gamers : i giocatori che subiranno i danni durante i round\n -  attacks : metodo di randomizzazione dell'attacco e del bersaglio e successivamente calcolo dei danni\n-checkWin:controlla se hai vinto\nMossa : \n - valMax : valore massimo che la mossa può infliggere\n - valMin : valore minimo che la mossa può infliggere\n - pSuccesso : valore minimo sopra il quale il danno generato potrà andare a buon fine\n - manaCost : costo in mana dell'uso della mossa\n - img : path della gif della mossa\n - sound : path del suono della mossa\n - type : tipo di mossa, danno o ripristino\n - area : tipo di danno che può fare, ad area quindi colpire tutti i personaggi o solo uno singolo\n - dmg : calcolo del danno che può infliggere la mossa\n - precision : calcolo precisione (pSuccess)\n"
@@ -3142,6 +3142,15 @@
 									},
 									"name": "nomeBersaglio",
 									"type": "string"
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAFzv42unrHC2CA=",
+									"_parent": {
+										"$ref": "AAAAAAFyK9cvOVluvyU="
+									},
+									"name": "callback",
+									"type": "function"
 								}
 							]
 						},
@@ -3573,6 +3582,15 @@
 									},
 									"type": "void",
 									"direction": "return"
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAFzv40jJbFlxyg=",
+									"_parent": {
+										"$ref": "AAAAAAFyK9/sfGMJPeU="
+									},
+									"name": "callback",
+									"type": "function"
 								}
 							]
 						},
