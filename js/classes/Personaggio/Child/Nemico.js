@@ -51,7 +51,7 @@ class Nemico extends Personaggio {
     checkWin() {
         var ret = true;
         this.gamers.forEach(gam => {
-            ret = ret && gam.life <= 0;
+            ret = ret && !gam.isAlive();
         });
         return ret;
     }

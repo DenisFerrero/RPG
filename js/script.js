@@ -46,7 +46,7 @@ function gameScript() {
     }
 
     self.selectedPlayer = function(index) {
-        if (self.game.gamers[index].life > 0) {
+        if (self.game.gamers[index].isAlive()) {
             var mosse = document.getElementById("mosse");
             self.currentPlayer = index;
             mosse.selectedIndex = 0;
@@ -87,7 +87,7 @@ function gameScript() {
     }
 
     self.attack = function() {
-        if (self.game.gamers[self.currentPlayer].life > 0) {
+        if (self.game.gamers[self.currentPlayer].isAlive()) {
             var action = document.getElementById("mosse").selectedIndex;
             self.game.gamers[self.currentPlayer].attacks(action - 1);
             self.game.turns++;
