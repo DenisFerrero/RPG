@@ -27,9 +27,9 @@ class Giocatore extends Personaggio {
         this.mosse.push(new Mossa(readedIndex + 2, idMex));
     }
 
-    attacks(index) {
+    attacks(index, callback) {
         if (this.mosse[index].type) {
-            var dmg = this.mosse[index].dmg(this, this.evil.name);
+            var dmg = this.mosse[index].dmg(this, this.evil.name, callback);
             if (dmg > 0) {
                 this.evil.life -= dmg;
             }
@@ -37,7 +37,7 @@ class Giocatore extends Personaggio {
                 window.location.href = "./end_page/win.html"
             }
         } else {
-            this.life += this.mosse[index].dmg(this, null);
+            this.life += this.mosse[index].dmg(this, null, callback);
             if (this.life > this.vitaMax)
                 this.life = this.vitaMax;
         }

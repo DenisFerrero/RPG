@@ -89,16 +89,15 @@ function gameScript() {
     self.attack = function() {
         if (self.game.gamers[self.currentPlayer].isAlive()) {
             var action = document.getElementById("mosse").selectedIndex;
-            self.game.gamers[self.currentPlayer].attacks(action - 1);
-            self.game.turns++;
-            self.updateGUI();
-            if (self.game.turns == 2) {
-                setTimeout(() => {
+            self.game.gamers[self.currentPlayer].attacks(action - 1, () => {
+                self.game.turns++;
+                self.updateGUI();
+                if (self.game.turns == 2) {
                     self.game.evil.attacks();
                     self.game.turns = 0;
                     self.updateGUI();
-                }, 4500);
-            }
+                }
+            });
         }
     }
 

@@ -14,7 +14,7 @@ class Personaggio {
     }
 
     isAlive() {
-        if (life > 0)
+        if (this.life > 0)
             return true;
         else
             return false;

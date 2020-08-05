@@ -40,7 +40,8 @@ class Mossa {
 
     //Se il personaggio si deve curare allora si passerà come valori (attaccante, null)
     //Se il personaggio deve attaccare allora si passerà come valori (attaccante, nome del bersaglio)
-    dmg(attaccante, nomeBersaglio) {
+    dmg(attaccante, nomeBersaglio, callback) {
+        document.getElementById('attack_button').disabled = true;
         //Generazione del danno, il danno varia tra valore max e min
         let damage = Math.floor(Math.random() * (this.valMax - this.valMin + 1) + this.valMin);
         var txt = document.getElementById(this.idMex);
@@ -48,7 +49,11 @@ class Mossa {
         if (this.precision(damage)) {
             if (attaccante.mana - this.manaCost < 0) {
                 txt.innerHTML = "Mana non sufficente per eseguire la mossa!";
-                setTimeout(() => { txt.innerHTML = "" }, 1000);
+                setTimeout(() => { 
+                    txt.innerHTML = "";
+                    callback();
+                    document.getElementById('attack_button').disabled = false;
+                }, 2500);
                 return -1;
             } else {
                 attaccante.mana -= this.manaCost;
@@ -67,7 +72,9 @@ class Mossa {
                     //Alla fine dell'audio si cancella il txt (dopo 500ms) e si fa tornare il danno
                     setTimeout(() => {
                         txt.innerHTML = "";
-                    }, 500);
+                        callback();
+                        document.getElementById('attack_button').disabled = false;
+                    }, 1500);
                 })
                 return damage;
             }
@@ -75,8 +82,10 @@ class Mossa {
             //Se non supera i valori di precisione allora torna semplicemente 0 + mex;
             txt.innerHTML = "La mossa non è abbastanza precisa e quindi non è andata a buon fine!";
             setTimeout(() => {
-                txt.innerHTML = ""
-            }, 2500);
+                txt.innerHTML = "";
+                callback();
+                document.getElementById('attack_button').disabled = false;
+            }, 3000);
             return 0;
         }
     }
