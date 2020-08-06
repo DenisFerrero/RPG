@@ -71,12 +71,16 @@ function gameScript() {
         if (self.game.gamers[self.currentPlayer].isAlive()) {
             var action = document.getElementById("mosse").selectedIndex;
             self.game.gamers[self.currentPlayer].attacks(action - 1, () => {
-                self.game.turns++;
+                self.game.turns++; 
+                self.conta++;
                 self.updateGUI();
                 if (self.game.turns == 2) {
-                    self.game.evil.attacks();
-                    self.game.turns = 0;
                     self.updateGUI();
+                    self.game.evil.attacks(() => { 
+                        self.game.turns = 0;
+                        self.conta++;
+                        self.updateGUI();
+                    });
                 }
             });
         }
@@ -84,13 +88,11 @@ function gameScript() {
 
     self.cambia_turno = function(turno_nemico) {
         var x = document.getElementById('scritta_turno');
-        console.log("Scritta turno -> " + x);
         if (turno_nemico) {
             document.getElementById("scritta_turno").innerHTML = "Turno " + self.conta + ": nemico";
         } else {
             document.getElementById("scritta_turno").innerHTML = "Turno " + self.conta + ": alleati";
         }
-        self.conta++;
     }
 
     self.updateGUI = function() {
@@ -112,7 +114,7 @@ function gameScript() {
             document.getElementById(idPlayer + '_life').setAttribute('style', 'width:' + self.proportionalWidth(self.game.gamers[i].life, self.game.gamers[i].vitaMax) + '%');
             document.getElementById(idPlayer + '_mana').setAttribute('style', 'width:' + self.proportionalWidth(self.game.gamers[i].mana, self.game.gamers[i].manaMax) + '%');
         }
-        self.cambia_turno(false);
+        self.cambia_turno(self.game.turns == 2);
     }
 
 }
