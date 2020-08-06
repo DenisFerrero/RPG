@@ -30,10 +30,10 @@ function gameScript() {
         if (self.game.gamers[index].isAlive()) {
             for (var i = 1; i <= 4; i++) {
                 document.getElementById("player_container_" + i).classList.remove("bg-success");
-
+                document.getElementById("player_container_" + i).classList.remove("text-white");
             }
             document.getElementById("player_container_" + (index + 1)).classList.add("bg-success");
-
+            document.getElementById("player_container_" + (index + 1)).classList.add("text-white");
             var mosse = document.getElementById("mosse");
             self.currentPlayer = index;
             mosse.selectedIndex = 0;
