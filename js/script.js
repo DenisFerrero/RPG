@@ -28,6 +28,12 @@ function gameScript() {
 
     self.selectedPlayer = function(index) {
         if (self.game.gamers[index].isAlive()) {
+            for (var i = 1; i <= 4; i++) {
+                document.getElementById("player_container_" + i).classList.remove("bg-success");
+
+            }
+            document.getElementById("player_container_" + (index + 1)).classList.add("bg-success");
+
             var mosse = document.getElementById("mosse");
             self.currentPlayer = index;
             mosse.selectedIndex = 0;
@@ -71,12 +77,12 @@ function gameScript() {
         if (self.game.gamers[self.currentPlayer].isAlive()) {
             var action = document.getElementById("mosse").selectedIndex;
             self.game.gamers[self.currentPlayer].attacks(action - 1, () => {
-                self.game.turns++; 
+                self.game.turns++;
                 self.conta++;
                 self.updateGUI();
                 if (self.game.turns == 2) {
                     self.updateGUI();
-                    self.game.evil.attacks(() => { 
+                    self.game.evil.attacks(() => {
                         self.game.turns = 0;
                         self.conta++;
                         self.updateGUI();
