@@ -49,9 +49,9 @@ class Mossa {
         if (this.precision(damage)) {
             if (attaccante.mana - this.manaCost < 0) {
                 txt.innerHTML = "Mana non sufficente per eseguire la mossa!";
-                setTimeout(() => { 
+                setTimeout(() => {
                     txt.innerHTML = "";
-                    if(callback) callback();
+                    if (callback) callback();
                     document.getElementById('attack_button').disabled = false;
                 }, 2500);
                 return -1;
@@ -67,12 +67,13 @@ class Mossa {
                 }
                 //Si riproduce l'audio del danno
                 let audio = new Audio(this.sound);
+                audio.volume = 0.1;
                 audio.play();
                 audio.addEventListener('ended', () => {
                     //Alla fine dell'audio si cancella il txt (dopo 500ms) e si fa tornare il danno
                     setTimeout(() => {
                         txt.innerHTML = "";
-                        if(callback) callback();
+                        if (callback) callback();
                         document.getElementById('attack_button').disabled = false;
                     }, 1500);
                 })
@@ -83,7 +84,7 @@ class Mossa {
             txt.innerHTML = "La mossa non è abbastanza precisa e quindi non è andata a buon fine!";
             setTimeout(() => {
                 txt.innerHTML = "";
-                if(callback) callback();
+                if (callback) callback();
                 document.getElementById('attack_button').disabled = false;
             }, 3000);
             return 0;
