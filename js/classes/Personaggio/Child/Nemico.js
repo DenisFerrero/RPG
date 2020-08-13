@@ -20,6 +20,7 @@ class Nemico extends Personaggio {
         this.img = newNemico.img;
         this.vitaMax = newNemico.life;
         this.gamers = gamers;
+        this.bg = newNemico.bg;
         this.mosse.push(new Mossa(0, idMex));
         this.mosse.push(new Mossa(readedIndex + 6, idMex));
         //Generazione indice della terza mossa del cattivo
