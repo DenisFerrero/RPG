@@ -4,7 +4,7 @@ var GiocatoriJSON = [{
         "mana": 100,
         "manaMax": 100,
         "nome": "Ryan",
-        "img": "new/path/for/image"
+        "img": "../media/image/team/ryan.png"
     },
     {
         "vitaMax": 100,
@@ -12,7 +12,7 @@ var GiocatoriJSON = [{
         "mana": 100,
         "manaMax": 100,
         "nome": "Margaret",
-        "img": "new/path/for/image"
+        "img": "../media/image/team/margaret.png"
     },
     {
         "vitaMax": 100,
@@ -20,7 +20,7 @@ var GiocatoriJSON = [{
         "mana": 100,
         "manaMax": 100,
         "nome": "Favaroo",
-        "img": "new/path/for/image"
+        "img": "../media/image/team/favaroo.png"
     },
     {
         "vitaMax": 100,
@@ -28,7 +28,7 @@ var GiocatoriJSON = [{
         "mana": 100,
         "manaMax": 100,
         "nome": "Jotaro",
-        "img": "new/path/for/image"
+        "img": "../media/image/team/jotaro.png"
     }
 
 ]
