@@ -105,6 +105,7 @@ function gameScript() {
 
         document.getElementById('boss_name').innerHTML = self.game.evil.name;
         document.getElementById('boss_image').src = self.game.evil.img;
+        document.getElementById('boss_image').setAttribute('style', 'max-width:180px;max-height:180px');
         document.getElementById('boss_life_txt').innerHTML = self.game.evil.life;
         document.getElementById('boss_life').setAttribute('style', 'width:' + self.proportionalWidth(self.game.evil.life, self.game.evil.vitaMax) + '%');
         if ((self.game.evil.mana + 5) > self.game.evil.manaMax) self.game.evil.mana = 100;
@@ -119,6 +120,8 @@ function gameScript() {
             document.getElementById(idPlayer + '_mana_txt').innerHTML = self.game.gamers[i].mana;
             document.getElementById(idPlayer + '_life').setAttribute('style', 'width:' + self.proportionalWidth(self.game.gamers[i].life, self.game.gamers[i].vitaMax) + '%');
             document.getElementById(idPlayer + '_mana').setAttribute('style', 'width:' + self.proportionalWidth(self.game.gamers[i].mana, self.game.gamers[i].manaMax) + '%');
+            document.getElementById(idPlayer + '_image').src = self.game.gamers[i].img;
+            document.getElementById(idPlayer + '_image').setAttribute('style', 'max-width: 100px; min-height:100px');
         }
         self.cambia_turno(self.game.turns == 2);
     }
