@@ -48,7 +48,7 @@ class Giocatore extends Personaggio {
         return !this.evil.isAlive();
     }
 
-    checkDeath () {
+    checkDeath (callback) {
         if(!this.isAlive()) {
             let giocatore_element = document.getElementById(this.id_giocatore);
             giocatore_element.onclick = null;
@@ -57,6 +57,7 @@ class Giocatore extends Personaggio {
             audio.volume = 0.1;
             audio.play();
             audio.addEventListener('ended', () => {
+                if(callback) callback();
                 //Alla fine dell'audio si cambia lo sfondo del personaggio ormai deceduto
                 giocatore_element.classList.add('bg-warning');
             })
