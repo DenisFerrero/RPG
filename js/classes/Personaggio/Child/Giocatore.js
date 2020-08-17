@@ -10,10 +10,11 @@ class Giocatore extends Personaggio {
         this.evil = evil;
     }*/
 
-    constructor(readedIndex, evil, idMex) {
+    constructor(readedIndex, evil, idMex, id_giocatore) {
         super();
         //Lettura dei dati del personaggio dal file JSON
         var newGiocatore = GiocatoriJSON[readedIndex];
+        this.id_giocatore = id_giocatore;
         this.vitaMax = newGiocatore.vitaMax;
         this.life = newGiocatore.life;
         this.mana = newGiocatore.mana;
@@ -42,7 +43,23 @@ class Giocatore extends Personaggio {
                 this.life = this.vitaMax;
         }
     }
+
     checkWin() {
         return !this.evil.isAlive();
+    }
+
+    checkDeath () {
+        if(!this.isAlive()) {
+            let giocatore_element = document.getElementById(this.id_giocatore);
+            giocatore_element.onclick = null;
+            giocatore_element.classList.remove("player");
+            let audio = new Audio('../media/sound/PagesSound/Death.mp3');
+            audio.volume = 0.1;
+            audio.play();
+            audio.addEventListener('ended', () => {
+                //Alla fine dell'audio si cambia lo sfondo del personaggio ormai deceduto
+                giocatore_element.classList.add('bg-warning');
+            })
+        }
     }
 }
