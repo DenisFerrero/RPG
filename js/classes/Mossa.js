@@ -67,7 +67,7 @@ class Mossa {
                 }
                 //Si riproduce l'audio del danno
                 let audio = new Audio(this.sound);
-                audio.volume = 0.1;
+                audio.volume = 0.2;
                 audio.play();
                 audio.addEventListener('ended', () => {
                     //Alla fine dell'audio si cancella il txt (dopo 500ms) e si fa tornare il danno
