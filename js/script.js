@@ -12,7 +12,7 @@ function gameScript() {
         game['turns'] = 0;
         game['gamers'] = [];
         for (let i = 0; i < 4; i++) {
-            game.gamers.push(new Giocatore(i, game.evil, 'gameConsole'));
+            game.gamers.push(new Giocatore(i, game.evil, 'gameConsole', ('player_container_' + (i+1))));
         }
 
         game.evil.gamers = game.gamers;
@@ -114,8 +114,10 @@ function gameScript() {
 
         for (let i = 0; i < 4; i++) {
             idPlayer = 'p' + (i + 1);
-            if ((self.game.gamers[i].mana + 5) > self.game.gamers[i].manaMax) self.game.gamers[i].mana = 100;
-            else self.game.gamers[i].mana += 5;
+            if(self.game.gamers[i].isAlive()) {
+                if ((self.game.gamers[i].mana + 5) > self.game.gamers[i].manaMax) self.game.gamers[i].mana = 100;
+                else self.game.gamers[i].mana += 5;
+            }
             document.getElementById(idPlayer + '_name').innerHTML = self.game.gamers[i].name;
             document.getElementById(idPlayer + '_life_txt').innerHTML = self.game.gamers[i].life;
             document.getElementById(idPlayer + '_mana_txt').innerHTML = self.game.gamers[i].mana;
@@ -125,6 +127,15 @@ function gameScript() {
             document.getElementById(idPlayer + '_image').setAttribute('style', 'max-width: 100px; min-height:100px');
         }
         self.cambia_turno(self.game.turns == 2);
+        // Deselect del precedente personaggio
+        for (var i = 1; i <= 4; i++) {
+            document.getElementById("player_container_" + i).classList.remove("bg-success");
+            document.getElementById("player_container_" + i).classList.remove("text-white");
+        }
+        // e delle mosse
+        mosse.options.item(1).text = "";
+        mosse.options.item(2).text = "";
+        mosse.options.item(3).text = ""; 
     }
 
 }
