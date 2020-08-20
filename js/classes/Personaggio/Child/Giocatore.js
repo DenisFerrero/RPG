@@ -2,6 +2,7 @@ class Giocatore extends Personaggio {
     vitaMax;
     evil;
     mosse = [];
+    wasAlive = true;
 
     //DUPLICATI DEI COSTRUTTORI NON ACCETTATI
     /*constructor(life, name, img, vitaMax, evil) {
@@ -44,5 +45,23 @@ class Giocatore extends Personaggio {
     }
     checkWin() {
         return !this.evil.isAlive();
+    }
+
+    checkDeath(foo) {
+        var j;
+
+        if (this.isAlive() != this.wasAlive) {
+
+            var snd = new Audio("../media/sound/PagesSound/death.mp3");
+            snd.volume = 0.1;
+            snd.play();
+            this.wasAlive = false;
+            j = document.getElementById("player_container_" + (foo + 1));
+            j.classList.add("bg-warning");
+            j.style.cursor = "default";
+
+        }
+
+
     }
 }

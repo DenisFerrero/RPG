@@ -44,6 +44,9 @@ class Nemico extends Personaggio {
             if (this.gamers[indexPlayer].life < 0)
                 this.gamers[indexPlayer].life = 0;
         }
+        var foo = indexPlayer;
+        this.gamers[indexPlayer].checkDeath(foo);
+
         if (this.checkWin()) {
             //Dopo un secondo carica la pagina di sconfitta
             setTimeout(() => { window.location.href = "./end_page/lose.html" }, 1000)
