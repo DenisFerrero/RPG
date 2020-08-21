@@ -53,8 +53,6 @@ class Mossa {
                 setTimeout(() => {
                     txt.innerHTML = "";
                     if (callback) callback();
-                    document.getElementById('attack_button').disabled = false;
-                    document.getElementById('mosse').disabled = false;
                 }, 2500);
                 return -1;
             } else {
@@ -76,8 +74,6 @@ class Mossa {
                     setTimeout(() => {
                         txt.innerHTML = "";
                         if (callback) callback();
-                        document.getElementById('attack_button').disabled = false;
-                        document.getElementById('mosse').disabled = false;
                     }, 1500);
                 })
                 return damage;
@@ -88,8 +84,6 @@ class Mossa {
             setTimeout(() => {
                 txt.innerHTML = "";
                 if (callback) callback();
-                document.getElementById('attack_button').disabled = false;
-                document.getElementById('mosse').disabled = false;
             }, 3000);
             return 0;
         }

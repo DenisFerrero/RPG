@@ -2,7 +2,6 @@ class Giocatore extends Personaggio {
     vitaMax;
     evil;
     mosse = [];
-    wasAlive = true;
 
     //DUPLICATI DEI COSTRUTTORI NON ACCETTATI
     /*constructor(life, name, img, vitaMax, evil) {

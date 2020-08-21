@@ -93,11 +93,16 @@ function gameScript() {
     }
 
     self.cambia_turno = function(turno_nemico) {
-        var x = document.getElementById('scritta_turno');
         if (turno_nemico) {
             document.getElementById("scritta_turno").innerHTML = "Turno " + self.conta + ": nemico";
+            self.turno = 1;
+            document.getElementById('mosse').disabled = true;
+            document.getElementById('attack_button').disabled = true;
         } else {
             document.getElementById("scritta_turno").innerHTML = "Turno " + self.conta + ": alleati";
+            self.turno = 0;
+            document.getElementById('mosse').disabled = false;
+            document.getElementById('attack_button').disabled = false;
         }
     }
 
