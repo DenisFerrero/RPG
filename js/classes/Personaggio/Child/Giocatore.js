@@ -54,7 +54,7 @@ class Giocatore extends Personaggio {
             giocatore_element.onclick = null;
             giocatore_element.classList.remove("player");
             let audio = new Audio('../media/sound/PagesSound/Death.mp3');
-            audio.volume = 0.1;
+            audio.volume = 0.2;
             audio.play();
             audio.addEventListener('ended', () => {
                 if(callback) callback();
