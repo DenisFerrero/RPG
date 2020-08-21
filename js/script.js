@@ -133,6 +133,7 @@ function gameScript() {
         }
         self.cambia_turno(self.game.turns == 2);
         // Deselect del precedente personaggio
+        self.currentPlayer = null;
         for (var i = 1; i <= 4; i++) {
             document.getElementById("player_container_" + i).classList.remove("bg-success");
             document.getElementById("player_container_" + i).classList.remove("text-white");
